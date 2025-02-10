@@ -5,6 +5,7 @@ import viteLogo from "/vite.svg";
 //mport "../src/temas/arreglos";
 //import "../src/temas/funciones";
 import "./temas/app";
+import juegosSwitch from "./arreglo";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
@@ -17,3 +18,6 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     
   </div>
 `;
+
+console.log("Imprimiendo juegos");
+console.log(juegosSwitch);
