@@ -3,7 +3,8 @@ import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 //import "../src/temas/objetos";
 //mport "../src/temas/arreglos";
-import "../src/temas/funciones";
+//import "../src/temas/funciones";
+import "./temas/destructury";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>

@@ -8,7 +8,7 @@ export const persona1 = {
     log: 12.53222,
   },
 } as const;
-
+//as const, lo vuelve readONLY
 const persona2 = structuredClone(persona1);
 
 console.log(persona1);
