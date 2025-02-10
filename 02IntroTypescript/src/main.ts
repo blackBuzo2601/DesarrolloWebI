@@ -18,6 +18,3 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     
   </div>
 `;
-
-console.log("Imprimiendo juegos");
-console.log(juegosSwitch);
