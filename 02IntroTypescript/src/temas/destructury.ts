@@ -3,6 +3,12 @@ const persona = {
   edad: 20,
   apodo: "saulillo",
 };
+const Elian = {
+  nombre: "elian",
+  edad: 23,
+  apodo: "buzo",
+  poder: "estudiar",
+};
 
 //PascalCase para interfaces
 interface CrearNuevoHeroe {
@@ -11,13 +17,6 @@ interface CrearNuevoHeroe {
   apodo: string;
   poder?: string;
 }
-
-const Elian = {
-  nombre: "elian",
-  edad: 23,
-  apodo: "buzo",
-  poder: "estudiar",
-};
 
 const crearNuevoHeroe = ({ nombre, edad, apodo, poder }: CrearNuevoHeroe) => ({
   id: 1234,
