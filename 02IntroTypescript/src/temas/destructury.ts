@@ -29,11 +29,6 @@ const crearNuevoHeroe = ({ nombre, edad, apodo, poder }: CrearNuevoHeroe) => ({
 console.log(crearNuevoHeroe({ ...persona, poder: "Jugar" }));
 
 /*
-const objeto:Heroe={}
-
-//repaso destructuring
-const { nombre, edad, apodo, poder: "Brincar" } = persona;
-
 //Otra  forma de acceder a las propiedades
 console.log({ nombre }); //{nombre: "saul"} imprime la key-value por asi decirlo
  */
