@@ -25,3 +25,10 @@ const heroes = [
     owner: "Marvel",
   },
 ];
+export const owner = ["DC", "Marvel", "LalitoDC"];
+
+export default heroes;
+
+export const saludar = () => {
+  return "Hola";
+};
