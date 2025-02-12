@@ -2,10 +2,14 @@ function saludarPersona(nombre: string) {
   return `${nombre}`;
 }
 
-const obtenerUsuario = (uid: string) => ({
-  uid,
+//esta función devuelve un objeto, el parentesis es poruqe queremos retornar un objeto
+const obtenerUsuario = (uid?: string) => ({
+  uid, //esto de aqui, es una forma de simplificar cuando definimos la property como
+  //{uid:uid}, al poner la variable local
   nombreUsuario: "La abejita magica",
 });
+
+console.log(obtenerUsuario("yoshi"));
 
 const heroes = [
   {
