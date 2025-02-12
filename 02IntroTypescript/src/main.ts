@@ -2,11 +2,11 @@ import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 //import "../src/temas/arreglos";
-import "../src/temas/funciones";
+//import "../src/temas/funciones";
 //import "../src/temas/objetos";
-//import "./temas/destructury";
 //import "./temas/destructury-arreglos";
-
+//import "./temas/destructury";
+import "./temas/imp-exp";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
