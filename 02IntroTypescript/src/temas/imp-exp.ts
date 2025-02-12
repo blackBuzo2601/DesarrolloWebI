@@ -6,7 +6,9 @@ const obtenerHeroeId = (id: number) => {
   return encontrado ? `Se encontro ${encontrado.nombre}` : "No se encontró";
 };
 
-const obtenerPorOwner = (owner: string) => {
+//en lugar de que la funcion obtenerPorOwner reciba un string, podemos definir
+//los parametros tipados que queremos que reciba, como en la siguiente linea
+const obtenerPorOwner = (owner: "DC" | "Marvel" | "LalitoDC") => {
   return heroes.filter((elemento) => elemento.owner === owner);
 };
 
