@@ -1,4 +1,13 @@
-const heroes = [
+export interface Hero {
+  id: number;
+  nombre: string;
+  owner: owner;
+}
+
+//podemos hacer un tipado mas explicito con type, como en la siguiente linea
+//para espeicifcarlo en la interfaz
+export type owner = "LalitoDC" | "Marvel" | "DC";
+const heroes: Hero[] = [
   {
     id: 1,
     nombre: "Zunni",

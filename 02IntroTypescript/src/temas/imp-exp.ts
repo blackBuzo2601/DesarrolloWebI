@@ -1,5 +1,5 @@
 //cuando importamos, normalmente se hace con un (alias)
-import heroes, { owner, saludar } from "../data/heroes";
+import heroes, { owner } from "../data/heroes";
 
 const obtenerHeroeId = (id: number) => {
   const encontrado = heroes.find((hero) => hero.id === id);
@@ -8,7 +8,7 @@ const obtenerHeroeId = (id: number) => {
 
 //en lugar de que la funcion obtenerPorOwner reciba un string, podemos definir
 //los parametros tipados que queremos que reciba, como en la siguiente linea
-const obtenerPorOwner = (owner: "DC" | "Marvel" | "LalitoDC") => {
+const obtenerPorOwner = (owner: owner) => {
   return heroes.filter((elemento) => elemento.owner === owner);
 };
 
