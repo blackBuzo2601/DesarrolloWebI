@@ -1,9 +1,9 @@
 //cuando importamos, normalmente se hace con un (alias)
 import heroes, { type Owner } from "../data/heroes";
 
-const obtenerHeroeId = (id: number) => {
-  const encontrado = heroes.find((hero) => hero.id === id);
-  return encontrado ? `Se encontro ${encontrado.nombre}` : "No se encontró";
+export const obtenerHeroeId = (id: number) => {
+  return heroes.find((hero) => hero.id === id);
+  //return encontrado ? `Se encontro ${encontrado.nombre}` : "No se encontró";
 };
 
 //en lugar de que la funcion obtenerPorOwner reciba un string, podemos definir

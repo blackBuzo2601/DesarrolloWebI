@@ -20,3 +20,25 @@ console.log("FINALIZÓ EL SEMESTRE");
 //catch cuando no ex exitosa
 //finally cuando finaliza la promesa independientemente si fue exitosa o no
  */
+
+import { obtenerHeroeId } from "./imp-exp";
+import { Hero } from "../data/heroes";
+
+const obtenerHeroesIdAsync = (id: number): Promise<Hero> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const heroe = obtenerHeroeId(id);
+      if (heroe) {
+        resolve(heroe);
+      } else {
+        reject("Heroe no encontrado con el ID proporcionado");
+      }
+    }, 1500);
+  });
+};
+
+obtenerHeroesIdAsync(8)
+  .then((heroe) => console.log("El nombre es: " + heroe.nombre))
+  .catch((errorMensaje) => {
+    console.log(errorMensaje);
+  });
