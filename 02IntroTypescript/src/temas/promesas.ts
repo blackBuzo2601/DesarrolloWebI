@@ -15,4 +15,8 @@ console.log("FINALIZÓ EL SEMESTRE");
 //resolve: promesa cumplida
 //reject: cuando una promesa no se cumple
 //catch: se ejecuta cuando el reject se hace presente
+
+//then promesa exitosa
+//catch cuando no ex exitosa
+//finally cuando finaliza la promesa independientemente si fue exitosa o no
  */
