@@ -3,7 +3,7 @@ export interface Hero {
   nombre: string;
   owner: Owner;
 }
-
+//
 //podemos hacer un tipado mas explicito con type, como en la siguiente linea
 //para espeicifcarlo en la interfaz
 export type Owner = "LalitoDC" | "Marvel" | "DC";
