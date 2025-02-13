@@ -6,7 +6,8 @@ import viteLogo from "/vite.svg";
 //import "../src/temas/objetos";
 //import "./temas/destructury-arreglos";
 //import "./temas/destructury";
-import "./temas/imp-exp";
+//import "./temas/imp-exp";
+import "./temas/promesas";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
