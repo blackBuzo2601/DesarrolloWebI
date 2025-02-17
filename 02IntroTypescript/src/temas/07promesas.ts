@@ -21,7 +21,7 @@ console.log("FINALIZÓ EL SEMESTRE");
 //finally cuando finaliza la promesa independientemente si fue exitosa o no
  */
 
-import { obtenerHeroeId } from "./imp-exp";
+import { obtenerHeroeId } from "./06imp-exp";
 import { Hero } from "../data/heroes";
 
 const obtenerHeroesIdAsync = (id: number): Promise<Hero> => {
