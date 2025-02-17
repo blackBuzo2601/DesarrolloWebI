@@ -13,5 +13,6 @@ const obtenerPorOwner = (owner: Owner) => {
   return heroes.filter((elemento) => elemento.owner === owner);
 };
 
-console.log(obtenerHeroeId(5));
+/* console.log(obtenerHeroeId(5));
 console.log(obtenerPorOwner("Marvel"));
+ */

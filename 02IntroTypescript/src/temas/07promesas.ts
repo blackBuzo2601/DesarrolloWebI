@@ -21,9 +21,11 @@ console.log("FINALIZÓ EL SEMESTRE");
 //finally cuando finaliza la promesa independientemente si fue exitosa o no
  */
 
-import { obtenerHeroeId } from "./06imp-exp";
-import { Hero } from "../data/heroes";
+import { obtenerHeroeId } from "./06imp-exp"; //funcion
+import { Hero } from "../data/heroes"; //interfaz
 
+//Promise<Hero> significa que devolverá un objeto de tipo Hero cuando se resuelva.
+//Promise es un tipo genérico, por eso usamos "<>""
 const obtenerHeroesIdAsync = (id: number): Promise<Hero> => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -31,14 +33,15 @@ const obtenerHeroesIdAsync = (id: number): Promise<Hero> => {
       if (heroe) {
         resolve(heroe);
       } else {
-        reject("Heroe no encontrado con el ID proporcionado");
+        reject("Heroe no encontrado con el ID proporcionado: " + id);
       }
     }, 1500);
   });
 };
 
-obtenerHeroesIdAsync(8)
+obtenerHeroesIdAsync(5)
   .then((heroe) => console.log("El nombre es: " + heroe.nombre))
   .catch((errorMensaje) => {
     console.log(errorMensaje);
-  });
+  })
+  .finally(() => console.log("Proceso finalizado de la promesa"));
