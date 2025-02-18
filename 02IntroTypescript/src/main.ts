@@ -8,7 +8,8 @@ import viteLogo from "/vite.svg";
 //import "./temas/destructury";
 //import "./temas/imp-exp";
 //import "./temas/07promesas";
-import "./temas/08fetch";
+//import "./temas/08fetch";
+import "./temas/09axios";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">

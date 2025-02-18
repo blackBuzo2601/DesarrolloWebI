@@ -1,7 +1,8 @@
 import { type GIFResponse } from "../interface/gif.response";
+//recordemos que con type, definimos que es un tipado, y no es una clase etc.
 
+//apiKey
 const apiKey = "5Sq3M7oGhVkPxVGXDGB5L1yWfmR0cmKc";
-
 //en las promesas, podemos colocar multiples ".then"
 //en el ejemplo siguiente, la respuesta la transformamos a un json,
 
