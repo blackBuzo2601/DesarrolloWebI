@@ -39,3 +39,5 @@ console.log(crearNuevoHeroe({ ...persona, poder: "Jugar" }));
 //Otra  forma de acceder a las propiedades
 console.log({ nombre }); //{nombre: "saul"} imprime la key-value por asi decirlo
  */
+
+export default crearNuevoHeroe;
