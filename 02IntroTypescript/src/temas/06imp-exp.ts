@@ -1,5 +1,5 @@
 //cuando importamos, normalmente se hace con un (alias)
-//aqui me quede en las notas de clase, lo mismo con el archivo de los heroes
+
 import heroes, { Hero, type Owner } from "../data/heroes";
 
 export const obtenerHeroeId = (id: number) => {

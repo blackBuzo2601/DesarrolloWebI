@@ -9,7 +9,7 @@ const apiKey = "5Sq3M7oGhVkPxVGXDGB5L1yWfmR0cmKc";
 //template strings
 
 fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`)
-  .then((resp) => resp.json()) //convertimos la respuesta en JSON
-  .then((body: GIFResponse) => console.log(body))
+  .then((resp) => resp.json()) //nuestro objeto Response lo transformamos a JSON (Otra promesa)
+  .then((body: GIFResponse) => console.log(body)) //tipamos el JSON
   //después de que se devuelva la respuesta en JSON, lo siguiente es tipar la respuesta
   .catch((err) => console.log(err));

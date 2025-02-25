@@ -1,15 +1,16 @@
 import { GIFResponse } from "../interface/gif.response";
 import { giphyApi } from "./09axios";
 
-//anteponemos async para definir que es asincrona
-//ESTO ES UNA PINCHE PROMESA QUE NO SE TE OLVIDE PA
+//anteponemos async para definir que es asincrona, esta funcion "siempre devolverá una promesa"
 export const obtenerImagen = async () => {
   try {
+    //el codigo se detiene en la siguiente linea hasta que se resuelve la promesa.
     const respuesta = await giphyApi.get<GIFResponse>("/random");
-    return respuesta.data.data.images.downsized.url;
+    return respuesta.data.data.images.downsized.url; //si se resuelve, se retorna la respuesta y accedemos a
+    //data (de axios) y luego a data (de la respuesta, el JSON resuelto)
   } catch (error) {
-    //toman los errores que generemos
-    throw "url not found";
+    //si no se resuelve la promesa en la linea del "await", se brinca al catch
+    throw "URL not found";
   }
 };
 
@@ -19,5 +20,5 @@ export const obtenerImagen = async () => {
   });
 };
  */
-obtenerImagen().then((url) => console.log(url));
+obtenerImagen().then((respuesta) => console.log(respuesta));
 obtenerImagen().catch((error) => console.log(error));
