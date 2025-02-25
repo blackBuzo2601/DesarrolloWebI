@@ -2,12 +2,14 @@ import { GIFResponse } from "../interface/gif.response";
 import { giphyApi } from "./09axios";
 
 //anteponemos async para definir que es asincrona
+//ESTO ES UNA PINCHE PROMESA QUE NO SE TE OLVIDE PA
 export const obtenerImagen = async () => {
   try {
-    const respuesta = await giphyApi.get<GIFResponse>("/random1");
+    const respuesta = await giphyApi.get<GIFResponse>("/random");
     return respuesta.data.data.images.downsized.url;
   } catch (error) {
-    throw "URL NOT FOUND";
+    //toman los errores que generemos
+    throw "url not found";
   }
 };
 
@@ -18,3 +20,4 @@ export const obtenerImagen = async () => {
 };
  */
 obtenerImagen().then((url) => console.log(url));
+obtenerImagen().catch((error) => console.log(error));
