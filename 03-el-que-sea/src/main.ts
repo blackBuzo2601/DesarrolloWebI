@@ -2,7 +2,7 @@ import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
-import { Alimentos } from "./interfaces/interfaz.ts";
+import { Alimento } from "./interfaces/interfaz.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
@@ -26,5 +26,6 @@ setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
 
 fetch("/data.json")
   .then((response) => response.json())
-  .then((body: Alimentos) => console.log(body))
+  .then((body: Alimento) => console.log(body))
+  .catch((err) => console.log(err))
   .finally(() => console.log("Proceso finalizado"));
