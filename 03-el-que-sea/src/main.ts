@@ -26,6 +26,10 @@ setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
 
 fetch("/data.json")
   .then((response) => response.json())
-  .then((body: Alimento) => console.log(body))
+  .then((body) => nuevaFuncion(body))
   .catch((err) => console.log(err))
-  .finally(() => console.log("Proceso finalizado"));
+  .finally(() => console.log("Proceso finalizado pa"));
+
+const nuevaFuncion = (array: Alimento[]) => {
+  array.forEach((elemento) => console.log(elemento.Alimento));
+};
