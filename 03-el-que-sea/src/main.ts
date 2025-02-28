@@ -1,8 +1,7 @@
 import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.ts";
-import { Alimento } from "./interfaces/interfaz.ts";
+import { consumirJSON } from "./consumirJSON";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
@@ -22,14 +21,4 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   </div>
 `;
 
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
-
-fetch("/data.json")
-  .then((response) => response.json())
-  .then((body) => nuevaFuncion(body))
-  .catch((err) => console.log(err))
-  .finally(() => console.log("Proceso finalizado pa"));
-
-const nuevaFuncion = (array: Alimento[]) => {
-  array.forEach((elemento) => console.log(elemento.Alimento));
-};
+consumirJSON(1);
