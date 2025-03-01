@@ -21,4 +21,4 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   </div>
 `;
 
-consumirJSON(1);
+consumirJSON();
