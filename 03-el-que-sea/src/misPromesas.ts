@@ -44,7 +44,7 @@ export const buscarComida = async (comida: string) => {
     }));
 
     const arregloComidas = dataJSONLower.filter((elemento) =>
-      elemento.Alimento.includes(comida)
+      elemento.Alimento.includes(comida.toLowerCase())
     );
 
     arregloComidas.forEach((elemento) => console.log(elemento.Alimento));

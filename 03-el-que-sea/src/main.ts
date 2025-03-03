@@ -2,11 +2,9 @@ import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 //import { consumirJSON } from "./consumirJSON";
-import { filtrarJSON } from "./filtrarJSON";
-import { Categoría } from "./interfaces/Alimento";
-import { consumirJSON } from "./consumirJSON";
-import { buscarComida } from "./buscarComida";
-
+import { consumirJSON } from "./misPromesas";
+import { filtrarJSON } from "./misPromesas";
+import { buscarComida } from "./misPromesas";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
@@ -24,12 +22,5 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     </p>
   </div>
 `;
-//const miEnum = Object.entries(Categoría);
 
-/* filtrarJSON("Cereales con grasa")
-  .then(() => console.log("Promesa Resuelta"))
-  .catch((error) => console.log(error))
-  .finally(() => console.log("PROMESA FINALIZADA"));
- */
-
-buscarComida("PAN".toLowerCase());
+buscarComida("CeReAL");
