@@ -3,8 +3,8 @@ import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 //import { consumirJSON } from "./consumirJSON";
 import { consumirJSON } from "./misPromesas";
-import { filtrarJSON } from "./misPromesas";
-import { buscarComida } from "./misPromesas";
+import { buscarPorCategoria } from "./misPromesas";
+import { buscarPorComida } from "./misPromesas";
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
@@ -22,5 +22,3 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     </p>
   </div>
 `;
-
-buscarComida("CeReAL");
