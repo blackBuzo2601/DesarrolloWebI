@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,25 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
+  <div id="app">
+    <div id="contenedor-menu-opciones">
+        <h1>Busqueda de alimentos</h1>
+        
+        <div id="formulario-tres-botones">
+          <button class="boton-uno" type="submit">Consumir JSON</button>
+          <input class="input-dos" type="text" placeholder="Buscar por categoría"></input>
+          <button class="boton-dos" type="submit">Buscar</button>
+          
+          <input class="input-tres" type="text" placeholder="Buscar por comida"></input>
+          <button class="boton-tres" type="submit">Buscar</button>
+        
+      </div> 
+    </div>
+    <div id="contenedor-resultados">
+
+      
+    </div>
+  </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

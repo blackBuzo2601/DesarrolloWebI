@@ -14,7 +14,7 @@ export const consumirJSON = async (rutaRelativa: string) => {
     const nuevoArreglo = dataJSON.map((elemento) => ({
       key: elemento.Alimento,
     }));
-    console.log(nuevoArreglo);
+    //console.log(nuevoArreglo);
     return nuevoArreglo;
   } catch (error) {
     throw "Un error " + error;
@@ -29,9 +29,9 @@ export const consumirJSON = async (rutaRelativa: string) => {
  * @param categoria: La categoría de la cual, buscamos obtener todos los alimentos que
  * que forman parte de la misma.
  */
-export const buscarPorCategoria = async (categoria: string) => {
+export const buscarPorCategoria = async (ruta: string, categoria: string) => {
   try {
-    const respuesta = await axios.get<Alimento[]>("../data/data.json");
+    const respuesta = await axios.get<Alimento[]>(ruta);
     const dataJSON = respuesta.data; //data JSON resuelta
     const dataJSONLower = dataJSON.map((elemento) => ({
       ...elemento,
@@ -41,7 +41,7 @@ export const buscarPorCategoria = async (categoria: string) => {
       (elemento) => elemento.Categoría == categoria.toLowerCase().trim()
     );
 
-    console.log(buscarPorCategoria);
+    //console.log(buscarPorCategoria);
     return buscarPorCategoria;
   } catch (error) {
     throw error;
@@ -57,9 +57,9 @@ export const buscarPorCategoria = async (categoria: string) => {
  * @param comida: El alimento en particular que buscamos, para obtener todas las coincidencias
  * existentes con el mismo nombre.
  */
-export const buscarPorComida = async (comida: string) => {
+export const buscarPorComida = async (ruta: string, comida: string) => {
   try {
-    const respuesta = await axios.get<Alimento[]>("../data/data.json");
+    const respuesta = await axios.get<Alimento[]>(ruta);
     const dataJSON = respuesta.data;
     const dataJSONLower = dataJSON.map((elemento) => ({
       ...elemento,
@@ -69,7 +69,7 @@ export const buscarPorComida = async (comida: string) => {
     const arregloComidas = dataJSONLower.filter((elemento) =>
       elemento.Alimento.includes(comida.toLowerCase().trim())
     );
-    console.log(arregloComidas);
+    //console.log(arregloComidas);
     return arregloComidas;
   } catch (error) {
     throw error;
